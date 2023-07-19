@@ -272,11 +272,9 @@ class MinesweeperAI():
         
         # Returns the first safe & unused move
         if self.safes:
-            moves = []
             for safe in self.safes:
                 if safe not in self.moves_made:
-                    moves.append(safe)
-                    return moves[0]
+                    return safe
         return None
 
     def make_random_move(self):
